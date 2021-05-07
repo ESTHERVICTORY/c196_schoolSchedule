@@ -21,16 +21,16 @@ import java.util.Calendar;
 
 
 
-public class Courses extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class Courses extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private DatePickerDialog datePickerDialog;
-    private Button dateButton;
+    private Button dateButton, btnEndTerm;
     private Spinner courseSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_assessments);
+        setContentView(R.layout.activity_courses);
 
         //Spinner DropDown
         courseSpinner =findViewById(R.id.courseSpinner);
@@ -40,7 +40,7 @@ public class Courses extends AppCompatActivity implements AdapterView.OnItemClic
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         courseSpinner.setAdapter(adapter);
 
-        courseSpinner.setOnItemClickListener(this);
+        courseSpinner.setOnItemSelectedListener(this);
 
 
         //Create Toolbar
@@ -51,7 +51,9 @@ public class Courses extends AppCompatActivity implements AdapterView.OnItemClic
 
         initDatePicker();
         dateButton = findViewById(R.id.datePickerButton);
+        btnEndTerm =findViewById(R.id.btnEndTerm);
         dateButton.setText(getTodaysDate());
+        btnEndTerm.setText(getTodaysDate());
     }
 
     private String getTodaysDate()
@@ -88,6 +90,8 @@ public class Courses extends AppCompatActivity implements AdapterView.OnItemClic
         //datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
 
     }
+
+
 
     private String makeDateString(int day, int month, int year)
     {
@@ -130,11 +134,16 @@ public class Courses extends AppCompatActivity implements AdapterView.OnItemClic
         datePickerDialog.show();
     }
 
+    //Spinner Toast
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long id) {
-        String choice = adapterView.getItemAtPosition(i).toString();
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+    String text =parent.getItemAtPosition(position).toString();
         Toast.makeText(this, "Selected", Toast.LENGTH_SHORT).show();
     }
-//Spinner Class Drop Down Menu
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 
 }

@@ -126,7 +126,7 @@
         android:background="#3C32C8"
         android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
-        android:text=" Courses "
+        android:text="@string/toolbarCourses"
         android:textColor="@color/white"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -137,11 +137,11 @@
 
     <Spinner
         android:id="@+id/courseSpinner"
-        android:layout_width="128dp"
+        android:layout_width="147dp"
         android:layout_height="32dp"
         android:layout_marginStart="264dp"
         android:layout_marginLeft="264dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/btnEndTerm" />
 

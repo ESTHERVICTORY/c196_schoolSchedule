@@ -1,4 +1,4 @@
-package com.example.schoolscheduler;
+package Models;
 
 public class ModelCourseInstructor {
 

@@ -119,29 +119,29 @@
 
     <Button
         android:id="@+id/btnAdd"
-        android:layout_width="56dp"
-        android:layout_height="51dp"
+        android:layout_width="32dp"
+        android:layout_height="49dp"
         android:layout_marginStart="340dp"
         android:layout_marginLeft="340dp"
-        android:layout_marginTop="702dp"
+        android:layout_marginTop="650dp"
         android:layout_marginEnd="11dp"
         android:layout_marginRight="11dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/addicon"
         android:clickable="true"
         android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.593"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btnEdit"
-        android:layout_width="50dp"
-        android:layout_height="51dp"
+        android:layout_width="35dp"
+        android:layout_height="48dp"
         android:layout_marginStart="330dp"
         android:layout_marginLeft="330dp"
         android:layout_marginTop="12dp"
@@ -154,24 +154,24 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/courseInstructorListView"
         app:layout_constraintTop_toBottomOf="@+id/btnDelete"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.101" />
 
     <Button
         android:id="@+id/btnDelete"
-        android:layout_width="64dp"
-        android:layout_height="50dp"
+        android:layout_width="48dp"
+        android:layout_height="47dp"
         android:layout_marginStart="339dp"
         android:layout_marginLeft="339dp"
-        android:layout_marginTop="287dp"
+        android:layout_marginTop="284dp"
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
         android:background="@drawable/deleteicon"
         android:clickable="true"
         android:tint="#3C1361"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/insertEmailText" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
