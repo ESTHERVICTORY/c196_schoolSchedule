@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Courses"></activity>
-        <activity android:name=".CourseInstructor" />
+        <activity android:name=".CourseInstructor" android:parentActivityName=".MainActivity" />
         <activity android:name=".Term" />
         <activity android:name=".MainActivity">
             <intent-filter>

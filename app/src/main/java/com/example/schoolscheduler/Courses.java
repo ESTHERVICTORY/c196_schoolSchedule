@@ -5,22 +5,43 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
-public class Courses extends AppCompatActivity {
+
+
+public class Courses extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
+    private Spinner courseSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assessments);
+
+        //Spinner DropDown
+        courseSpinner =findViewById(R.id.courseSpinner);
+
+        ArrayAdapter<CharSequence> adapter =ArrayAdapter.createFromResource(
+                this,R.array.CoursesStatus, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        courseSpinner.setAdapter(adapter);
+
+        courseSpinner.setOnItemClickListener(this);
+
 
         //Create Toolbar
         Toolbar toolbar = findViewById(R.id.coursesToolbar);
@@ -108,4 +129,12 @@ public class Courses extends AppCompatActivity {
     {
         datePickerDialog.show();
     }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long id) {
+        String choice = adapterView.getItemAtPosition(i).toString();
+        Toast.makeText(this, "Selected", Toast.LENGTH_SHORT).show();
+    }
+//Spinner Class Drop Down Menu
+
 }

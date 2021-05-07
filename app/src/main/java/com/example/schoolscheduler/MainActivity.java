@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 //Create Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.assessments:
-                Intent intent5 = new Intent(MainActivity.this , Courses.class);
+                Intent intent5 = new Intent(MainActivity.this , Assessments.class);
                 startActivity(intent5);
                 break;
         }
